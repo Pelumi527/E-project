@@ -26,22 +26,22 @@ const createMintTransactionBlock = () => {
 export default function Home() {
   const wallet = useWallet();
 
-  const mintNFT = async () => {
-    if (!wallet.connected) return;
+  // const mintNFT = async () => {
+  //   if (!wallet.connected) return;
 
-    const txb = createMintTransactionBlock();
+  //   const txb = createMintTransactionBlock();
 
-    try {
-      const res = await wallet.signAndExecuteTransactionBlock({
-        transactionBlock: txb
-      })
-      console.log("nft minted successfully!", res);
-      alert("Congrats! your nft is minted!");
-    } catch (error) {
-      alert("Oops, nft minting failed");
-      console.error("nft mint failed", error);
-    }
-  };
+  //   try {
+  //     const res = await wallet.signAndExecuteTransactionBlock({
+  //       transactionBlock: txb
+  //     })
+  //     console.log("nft minted successfully!", res);
+  //     alert("Congrats! your nft is minted!");
+  //   } catch (error) {
+  //     alert("Oops, nft minting failed");
+  //     console.error("nft mint failed", error);
+  //   }
+  // };
   return (
     <WalletProvider>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
